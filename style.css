@@ -8,6 +8,9 @@ noh3 {
     padding: 10px 20px;
     background-image: url('https://raw.githubusercontent.com/Inchayiq12345/Barangmurah/main/ic_chat.png');
     background-size: contain;
+    width: 5px;
+    height: 5px;
+    
     background-repeat: no-repeat;
     color: pink;
     text-decoration: none;
