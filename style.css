@@ -6,6 +6,7 @@ noh3 {
 .red-button {
     display: inline-block;
     padding: 10px 20px;
+    background-color: red;
     background-image: url('https://raw.githubusercontent.com/Inchayiq12345/Barangmurah/main/ic_chat.png');
     background-size: contain;
     width: 5px;
