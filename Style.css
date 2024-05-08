@@ -1,3 +1,6 @@
-.red-text {
-    color: red;
+h3 {
+    color: red; /* Mengubah warna teks menjadi merah */
+    font-size: 24px; /* Mengubah ukuran font */
+    font-weight: bold; /* Membuat teks menjadi tebal */
+    /* Tambahkan properti CSS lainnya sesuai kebutuhan */
 }
