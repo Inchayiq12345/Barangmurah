@@ -8,6 +8,14 @@ h3 {
     color: white;
     border: none;
 }
+
+.blue-button {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+
 a {
     color: white;
     text-decoration: none;
