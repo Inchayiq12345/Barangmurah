@@ -1,1 +1,16 @@
 
+a {
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:first-of-type {
+  background-color: #1fc296;
+}
+
+a:last-of-type {
+  background-color: #d45a5a;
+}
