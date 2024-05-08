@@ -6,7 +6,7 @@ h3 {
 .red-button {
     display: inline-block;
     padding: 10px 20px;
-    background-image: url('https://cdn.iconscout.com/icon/free/png-512/free-chat-1438147-1213937.png?f=webp&w=512');
+    background-image: url('chat.png');
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
