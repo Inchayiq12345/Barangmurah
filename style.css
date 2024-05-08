@@ -1,4 +1,4 @@
-h3 {
+noh3 {
     color: yellow ;
     font-size: 20px;
     font-weight: bold; 
@@ -7,7 +7,7 @@ h3 {
     display: inline-block;
     padding: 10px 20px;
     background-image: url('https://raw.githubusercontent.com/Inchayiq12345/Barangmurah/main/ic_chat.png');
-    background-size: 50px 50px;
+    background-size: cover;
     background-repeat: no-repeat;
     color: pink;
     text-decoration: none;
