@@ -4,9 +4,13 @@ h3 {
     font-weight: bold; 
 }
 .red-button {
-    background-color: red;
+    display: inline-block;
+    padding: 10px 20px;
+    background-image: url('gambar_tombol.png'); /* Ganti 'gambar_tombol.png' dengan nama gambar yang Anda miliki */
+    background-size: cover; /* Atur ukuran gambar sesuai dengan ukuran tombol */
+    background-repeat: no-repeat; /* Jangan ulangi gambar di latar belakang */
     color: white;
-    border: none;
+    text-decoration: none;
 }
 
 .blue-button {
