@@ -5,7 +5,7 @@ h3 {
 }
 .red-button {
     display: inline-block;
-    padding: 0px;
+    padding: 10px 20px;
     background-image: url('https://raw.githubusercontent.com/Inchayiq12345/Barangmurah/main/ic_chat.png');
     background-size: 50px 50px;
     background-repeat: no-repeat;
