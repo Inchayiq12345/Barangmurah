@@ -7,7 +7,7 @@ h3 {
     position: fixed;
     bottom: 0;
     left: -10px;
-    transform: translateX(-50%);
+    
     display: inline-block;
     background-color: red;
     background-image: url('https://raw.githubusercontent.com/Inchayiq12345/Barangmurah/main/ic_chat.png');
