@@ -15,15 +15,23 @@ h3 {
     height: 50px;
     background-position: center center;
     background-repeat: no-repeat;
-    color: pink;
     text-decoration: none;
 }
 
 
-.blue-button {
-    background-color: blue;
-    color: white;
-    border: none;
+.blue-button {  
+    position: fixed;
+    bottom: 0;
+    left: -10px;
+    display: inline-block;
+    background-color: red;
+    background-image: url('https://raw.githubusercontent.com/Inchayiq12345/Barangmurah/main/ic_chat.png');
+    background-size: contain;
+    width: 100px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-decoration: none;
 }
 
 
