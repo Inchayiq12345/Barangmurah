@@ -6,7 +6,7 @@ h3 {
 .red-button {
     position: fixed;
     bottom: 0;
-    left: 50%;
+    left: -10px;
     transform: translateX(-50%);
     display: inline-block;
     background-color: red;
