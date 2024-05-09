@@ -29,7 +29,7 @@ h3 {
 .blue-button {  
     position: fixed;
     bottom: 0;
-    left: -70px;
+    left: 70px;
     display: inline-block;
     background-color: blue;
     background-image: url('https://raw.githubusercontent.com/Inchayiq12345/Barangmurah/main/ic_chat.png');
