@@ -3,6 +3,14 @@ h3 {
     font-size: 20px;
     font-weight: bold; 
 }
+.box {
+    position: fixed; /* Menetapkan posisi elemen */
+    bottom: 0; /* Menempatkan elemen di bagian paling bawah */
+    width: 100%; /* Membuat lebar div menjadi 100% dari lebar layar */
+    background-color: blue;
+    text-align: center;
+    line-height: 200px; /* Sesuaikan dengan kebutuhan */
+}
 .red-button {
     position: fixed;
     bottom: 0;
