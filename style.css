@@ -7,10 +7,9 @@ h3 {
     position: fixed; 
     bottom: 0;
     left: -10px;
-    width: 100%; 
+    width: 105%; 
     height: 70px;
     background-color: yellow;
-    padding: 0px 10px;
 }
 .red-button {
     position: fixed;
