@@ -15,6 +15,7 @@ noh3 {
     color: pink;
     text-decoration: none;
     margin-top: -5px;
+    float: left;
 }
 
 .blue-button {
