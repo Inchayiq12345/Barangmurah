@@ -9,7 +9,23 @@
     <input type="submit" name="submit" value="Submit" onclick="submitForm()" />
 </form>
 
+<script>
+      function submitForm() {
+        var nama = document.getElementById("nama").value;
 
+        // Kirim data formulir ke server menggunakan AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://your-server.com/proses-input.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            // Tangani respons dari server jika diperlukan
+            console.log(xhr.responseText);
+          }
+        };
+        xhr.send("nama=" + nama);
+      }
+    </script>
 
 
 
