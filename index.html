@@ -1,16 +1,21 @@
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
   <body>
-<form id="myForm">
-    Nama: <input type="text" id="nama" name="nama" /><br />
-    <input type="submit" name="submit" value="Submit" onclick="submitForm()" />
-</form>
+    <form id="myForm">
+        Nama: <input type="text" id="nama" name="nama" /><br />
+        <input type="submit" name="submit" value="Submit" onclick="submitForm(event)" />
+    </form>
 
-<script>
-      function submitForm() {
+    <script>
+      function submitForm(event) {
+        event.preventDefault(); // Menghentikan aksi default dari tombol submit
+
         var nama = document.getElementById("nama").value;
 
         // Kirim data formulir ke server menggunakan AJAX
@@ -18,20 +23,27 @@
         xhr.open("POST", "https://inchayiq12345.github.io/Barangmurah/proses-input.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            // Tangani respons dari server jika diperlukan
-            console.log(xhr.responseText);
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              // Tangani respons dari server jika berhasil
+              console.log(xhr.responseText);
+              alert("Data berhasil dikirim!");
+            } else {
+              // Tangani kesalahan jika pengiriman gagal
+              console.error("Gagal mengirim data:", xhr.status);
+              alert("Gagal mengirim data. Silakan coba lagi.");
+            }
           }
+        };
+        xhr.onerror = function() {
+          // Tangani kesalahan koneksi
+          console.error("Gagal mengirim data: koneksi terputus");
+          alert("Gagal mengirim data. Koneksi terputus. Silakan coba lagi.");
         };
         xhr.send("nama=" + nama);
       }
     </script>
 
-
-
-
-
-    
     <div class="kotak-bawah">
       <a href="chat://open">
         <button class="red-button" type="button"> </button>
