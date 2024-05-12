@@ -11,7 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -28,39 +27,19 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `Contoh` (
-  `Id` int(15) NOT NULL,
-  `User` varchar(25) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `Id` int(15) NOT NULL AUTO_INCREMENT,
+  `User` varchar(25) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data untuk tabel `Contoh`
 --
 
-INSERT INTO `Contoh` (`Id`, `User`) VALUES
-(1, 'Gh');
+-- Tidak ada data awal yang dimasukkan di sini
 
---
--- Indexes for dumped tables
---
-
---
--- Indeks untuk tabel `Contoh`
---
-ALTER TABLE `Contoh`
-  ADD PRIMARY KEY (`Id`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `Contoh`
---
-ALTER TABLE `Contoh`
-  MODIFY `Id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
