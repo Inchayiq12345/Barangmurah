@@ -1,20 +1,17 @@
 
-
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
   <body>
- <form id="myForm">
-    Nama: <input type="text" id="nama" name="nama" /><br />
-    <input type="submit" value="Submit" onclick="submitForm()" />
-  </form>
+    <form id="myForm" action="javascript:void(0);">
+      Nama: <input type="text" id="nama" name="nama" /><br />
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
 
-  <script>
-    function submitForm() {
-    if (document.readyState === "complete") {
+    <script>
+      function submitForm() {
         // Menerima data dari formulir HTML
         var nama = document.getElementById('nama').value;
 
@@ -31,62 +28,57 @@
 
         // Ambil konten file yang ada di repositori
         fetch(api_url, {
-                headers: {
-                    'Authorization': 'token ' + token,
-                    'User-Agent': 'JavaScript'
-                }
-            })
-            .then(function(response) {
-                if (!response.ok) {
-                    throw new Error('Failed to fetch file from GitHub. HTTP code: ' + response.status);
-                }
-                return response.json();
-            })
-            .then(function(file_content) {
-                // Dekode konten file
-                var content = atob(file_content.content);
+          headers: {
+            'Authorization': 'token ' + token,
+            'User-Agent': 'JavaScript'
+          }
+        })
+        .then(function(response) {
+          if (!response.ok) {
+            throw new Error('Failed to fetch file from GitHub. HTTP code: ' + response.status);
+          }
+          return response.json();
+        })
+        .then(function(file_content) {
+          // Dekode konten file
+          var content = atob(file_content.content);
 
-                // Tambahkan data baru ke dalam isi file
-                var data_sql = "INSERT INTO `Contoh` (`User`) VALUES ('" + nama + "');";
-                content += '\n' + data_sql;
+          // Tambahkan data baru ke dalam isi file
+          var data_sql = "INSERT INTO `Contoh` (`User`) VALUES ('" + nama + "');";
+          content += '\n' + data_sql;
 
-                // Menyiapkan data untuk dikirim
-                var data = {
-                    message: 'Updating data from form',
-                    content: btoa(content),
-                    sha: file_content.sha,
-                    branch: 'main'
-                };
+          // Menyiapkan data untuk dikirim
+          var data = {
+            message: 'Updating data from form',
+            content: btoa(content),
+            sha: file_content.sha,
+            branch: 'main'
+          };
 
-                // Kirim data yang diperbarui kembali ke GitHub
-                return fetch(api_url, {
-                    method: 'PUT',
-                    headers: {
-                        'Authorization': 'token ' + token,
-                        'User-Agent': 'JavaScript',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-            })
-            .then(function(response) {
-                if (!response.ok) {
-                    throw new Error('Failed to update data. HTTP code: ' + response.status);
-                }
-                alert('Data updated successfully!');
-            })
-            .catch(function(error) {
-                console.error('An error occurred:', error);
-                alert('Failed to update data: ' + error.message);
-            });
-    } else {
-        alert('The document is not fully loaded yet.');
-    }
-    }
-  </script>
+          // Kirim data yang diperbarui kembali ke GitHub
+          return fetch(api_url, {
+            method: 'PUT',
+            headers: {
+              'Authorization': 'token ' + token,
+              'User-Agent': 'JavaScript',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+        })
+        .then(function(response) {
+          if (!response.ok) {
+            throw new Error('Failed to update data. HTTP code: ' + response.status);
+          }
+          alert('Data updated successfully!');
+        })
+        .catch(function(error) {
+          console.error('An error occurred:', error);
+          alert('Failed to update data: ' + error.message);
+        });
+      }
+    </script>
 
-
-    
     <div class="kotak-bawah">
       <a href="chat://open">
         <button class="red-button" type="button"> </button>
@@ -97,3 +89,4 @@
     </div>
   </body>
 </html>
+
